@@ -1,5 +1,5 @@
 class Book {
-    private static int idCounter = 1001;
+    private static int idCounter = 1;
     private int id;
     private String title;
     private Author author;
@@ -24,5 +24,13 @@ class Book {
         String statusText = isAvailable ? "\u001B[32mAvailable\u001B[0m" : "\u001B[31mBorrowed\u001B[0m";
         return String.format("ID: %d | Title: %-15s | Author: %-15s | Year: %s | Status: %s",
                 id, title, author.getName(), year, statusText);
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public Author getAuthor() {
+        return author;
     }
 }
